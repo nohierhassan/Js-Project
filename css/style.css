@@ -1716,7 +1716,15 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem; }
-
+.error_message{
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fe8b8e;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;         
+  display: none;
+}
 .form-text {
   display: block;
   margin-top: 0.25rem; }
