@@ -114,3 +114,24 @@ function loadpage(){
     }
 }
 
+let page = 1;
+let pagination_ul = document.querySelectorAll("#pagination_ul li");
+pagination_ul.forEach( (li, index) => {
+    li.addEventListener('click', function(e){
+        page = this.textContent;
+        console.log(page);
+        if(this.hasAttribute("class")) {     
+            this.setAttribute("class", "active");
+        }else{
+            this.setAttribute("class", "active");
+        }
+        if(index != this.index){
+            console.log("true")
+        }
+        console.log(this);
+    });
+
+    console.log(li);
+});
+
+
