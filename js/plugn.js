@@ -5,6 +5,8 @@ const xhr = new XMLHttpRequest();
 const products_view = document.getElementById("all_products_view");
 let users = {};
 
+var product_card = "";
+
 //function creat elements and append it to the div
 let create_divs = (ele, i, users) => {
     //create element div and add its classes
@@ -78,7 +80,7 @@ let create_divs = (ele, i, users) => {
        p_button.className += "bottom-area d-flex px-3";
 
    //create add to cart button
-   let add_cart_button = document.createElement("button");
+    add_cart_button = document.createElement("button");
        add_cart_button.className += "buy-now text-center py-2";
        add_cart_button.innerHTML = `Add to cart <i class="fas fa-cart-plus"></i>`;
    
@@ -94,8 +96,16 @@ let create_divs = (ele, i, users) => {
    //append product to div_col
    div_col.appendChild(single_product);
 
-   //append div_col to products_view
-   products_view.appendChild(div_col);
+    //append div_col to products_view
+    products_view.appendChild(div_col);
+
+    // click button to add productid to local storage
+    add_cart_button.addEventListener('click', (e)=>{
+        console.log(users[i]);
+        product_card += users[i].ProductId + " ";
+        localStorage.setItem("product", product_card);
+        // console.log(localStorage.getItem("product"));
+    });
 }
 
 
@@ -109,6 +119,10 @@ function loadpage(){
         users = JSON.parse(xhr.response).data;
 
         users.map(create_divs);
+
+        add_cart_button.addEventListener('click', (e)=>{
+            console.log("ddd");
+        });
         
     }else{
         console.log("faild");
