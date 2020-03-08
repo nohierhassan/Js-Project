@@ -114,7 +114,7 @@ function loadpage(){
         console.log("faild");
     }
 }
-
+ // make pagination in home page 
 let page = 1;
 let pagination_ul = document.querySelectorAll("#pagination_ul li");
 pagination_ul.forEach( (li, index) => {
