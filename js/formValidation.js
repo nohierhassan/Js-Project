@@ -17,7 +17,7 @@ function sendData(jsonObj)
 {
 
 	fetch('https://afternoon-falls-30227.herokuapp.com/api/v1/contact_us',
-
+   
 	{
 		method:'POST',
 		body: jsonObj
@@ -61,13 +61,13 @@ function formValidation()
 		error_message.innerHTML = text;
 		return false;
 	}
-	else if(! validateEmail(email))
+	else if(! validateEmail(email))  
 	{
 		text = "Please enter a valid email address";
 		error_message.innerHTML = text;
 		return false;
 	}
-	else if(! checkNull(subject))
+	else if(! checkNull(subject))  
 	{
 		text = "Subject Field is Required!";
 		error_message.innerHTML = text;
@@ -78,7 +78,7 @@ function formValidation()
 		text = "Message Field is Required!";
 		error_message.innerHTML = text;
 		return false
-	}
+	}   
 
 	jsonObj = 
 	{
@@ -87,8 +87,8 @@ function formValidation()
 		'subject':subject,
 		'message':message
 	}
-	sendData(jsonObj);
-	
+	sendData(jsonObj);  
+
 
 
 

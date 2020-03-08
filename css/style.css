@@ -1706,7 +1706,7 @@ textarea.form-control {
   background: #fe8b8e;
   text-align: center;
   font-size: 14px;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease;         
   display: none;
 }
 .form-text {
