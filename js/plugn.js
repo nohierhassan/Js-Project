@@ -1,5 +1,10 @@
 //here is our code in js
 
+// elkhadragy part view products in home page
+const xhr = new XMLHttpRequest();
+const products_view = document.getElementById("all_products_view");
+let users = {};
+
 //function creat elements and append it to the div
 let create_divs = (ele, i, users) => {
     //create element div and add its classes
@@ -94,10 +99,6 @@ let create_divs = (ele, i, users) => {
 }
 
 
-// elkhadragy part view products in home page
-const xhr = new XMLHttpRequest();
-const products_view = document.getElementById("all_products_view");
-let users = {};
 
 xhr.open('GET', 'https://afternoon-falls-30227.herokuapp.com/api/v1/products/');
 xhr.send();
@@ -113,4 +114,28 @@ function loadpage(){
         console.log("faild");
     }
 }
+ // make pagination in home page 
+let page = 1;
+let pagination_ul = document.querySelectorAll("#pagination_ul li");
+pagination_ul.forEach( (li, index) => {
+    li.addEventListener('click', function(e){
+        page = this.textContent;
+        
+        if(this.hasAttribute("class")) {     
+            this.setAttribute("class", "active");
+        }else{
+            this.setAttribute("class", "active");
+        }
+        for (let sibling of this.parentNode.children) {
+            if (sibling !== this) sibling.classList.remove('active');
+        }
+
+        products_view.innerHTML = "";
+        xhr.open('GET', `https://afternoon-falls-30227.herokuapp.com/api/v1/products/?page=${page}`);
+        xhr.send();
+        xhr.onload = loadpage;
+        console.log(this);
+    });
+});
+
 

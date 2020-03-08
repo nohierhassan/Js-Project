@@ -9770,7 +9770,7 @@ textarea.form-control {
     display: inline-block;
     margin-bottom: 4px;
     font-weight: 400; }
-    .block-27 ul li a, .block-27 ul li span {
+    .block-27 ul li a, .block-27 ul li {
       color: #000000;
       text-align: center;
       display: inline-block;
@@ -9779,8 +9779,10 @@ textarea.form-control {
       line-height: 40px;
       border-radius: 50%;
       border: 1px solid #e6e6e6;
-      background: #fff; }
-    .block-27 ul li.active a, .block-27 ul li.active span {
+      background: #fff; 
+      cursor: pointer;
+    }
+    .block-27 ul li.active a, .block-27 ul li.active{
       background: #000000;
       color: #fff;
       border: 1px solid transparent; }
