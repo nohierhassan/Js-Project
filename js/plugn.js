@@ -15,13 +15,13 @@ function loadpage(){
         users = JSON.parse(xhr.response).data;
 
         
+        
+
         for(let i = 0; i<10; i++){
 
             //create element div and add its classes
             let div_col = document.createElement("div");
-                div_col.classList.add("col-sm");
-                div_col.classList.add("col-md-6");
-                div_col.classList.add("col-lg");
+                div_col.className += "col-sm col-md-6 col-lg";
 
             //create div single_product and add class to isolation
             let single_product = document.createElement("div");
@@ -33,8 +33,14 @@ function loadpage(){
                 a_contains_img_attr.value = "#";
                 a_contains_img.setAttributeNode(a_contains_img_attr);
                 a_contains_img.classList.add("img-prod");
-
             
+            // create img_product and add src and class to it with alt value
+            let img_product = document.createElement("img");
+            let img_alt_attr = document.createAttribute("alt");
+                img_alt_attr.value = users[0].Name;
+                img_product.setAttributeNode(img_alt_attr);
+                img_product.className += "img-fluid";
+                img_product.src = users[0].ProductPicUrl;
 
         }
         
