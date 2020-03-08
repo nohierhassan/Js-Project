@@ -8720,14 +8720,6 @@ h1, h2, h3, h4, h5,
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-    .product .img-prod span.status {
-      position: absolute;
-      top: 10px;
-      left: -1px;
-      padding: 2px 15px;
-      color: #000000;
-      font-weight: 300;
-      background: #ffa45c; }
     .product .img-prod img {
       -webkit-transform: scale(1);
       -moz-transform: scale(1);
@@ -8802,11 +8794,14 @@ h1, h2, h3, h4, h5,
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-      .product .text .bottom-area a {
+      .product .text .bottom-area button {
         color: #000000;
         width: 100%;
-        background: #fff; }
-      .product .text .bottom-area a.add-to-cart, .product .text .bottom-area a.buy-now {
+        background: #fff; 
+        border: none;
+        cursor: pointer;
+      }
+      .product .text .bottom-area a.add-to-cart, .product .text .bottom-area button.buy-now {
         font-size: 13px;
         color: #000000;
         text-transform: uppercase;
@@ -8816,13 +8811,10 @@ h1, h2, h3, h4, h5,
       .product .text .bottom-area a.add-to-cart {
         background: #000000;
         color: #fff; }
-        .product .text .bottom-area a.add-to-cart:hover {
-          background: #ffa45c;
-          color: #fff; }
-      .product .text .bottom-area a.buy-now {
+      .product .text .bottom-area button.buy-now {
         background: #fff;
         color: #000000; }
-        .product .text .bottom-area a.buy-now:hover {
+        .product .text .bottom-area button.buy-now:hover {
           background: #ffa45c;
           color: #fff; }
       @media (max-width: 991.98px) {
@@ -9230,11 +9222,11 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 9em 0;
+  padding: 5em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 5em 0; } }
 
 @media (max-width: 767.98px) {
   .ftco-choose {
