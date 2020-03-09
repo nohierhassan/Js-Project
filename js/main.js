@@ -136,5 +136,26 @@
 
 
 
+	// close window of view product details when click close_window icon
+	var close_window = $("#close_window");
+	var product_details_view = $("#product_details_view");
+
+	close_window.click(function(){
+		product_details_view.fadeOut(300);
+	});
+
+	// close window of view product details when click outside the window
+	$(document).click(function (e){
+
+		if (product_details_view.is(e.target) && product_details_view.has(e.target).length === 0){
+
+			product_details_view.fadeOut(300);
+			
+		}
+	});
+
+
+
+
 })(jQuery);
 
