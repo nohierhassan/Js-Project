@@ -4,7 +4,9 @@
 const xhr = new XMLHttpRequest();
 const products_view = document.getElementById("all_products_view");
 let users = {};
-
+// section that view product details
+const product_details_view = document.getElementById("product_details_view");
+// variable that contains card productID saved in localstoradge
 var product_card = "";
 
 //function creat elements and append it to the div
@@ -106,6 +108,15 @@ let create_divs = (ele, i, users) => {
         localStorage.setItem("product", product_card);
         // console.log(localStorage.getItem("product"));
     });
+
+    //click button to view product view
+    a_contains_img.addEventListener('click', (e)=>{
+        e.preventDefault();
+        product_details_view.style.display = 'block';
+        console.log(users[i].Price);
+        //here you can complete your code or make function with data as a parameter outside and call it here 
+
+    });
 }
 
 
@@ -151,5 +162,6 @@ pagination_ul.forEach( (li, index) => {
         console.log(this);
     });
 });
+
 
 
