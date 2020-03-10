@@ -76,9 +76,16 @@ let create_divs = (ele, i, users) => {
    let add_cart_button = document.createElement("button");
        add_cart_button.className += "buy-now text-center py-2";
        add_cart_button.innerHTML = `Add to cart <i class="fas fa-cart-plus"></i>`;
-   
+
+    //create Show details  button
+   let show_details_button = document.createElement("button");
+        show_details_button.className += "buy-now text-center py-2";
+        show_details_button.innerHTML = ` Show Details `;
+        
    //append add_cart_button to p_button
    p_button.appendChild(add_cart_button);
+   p_button.appendChild(show_details_button);
+
 
    //append p_button to div_text
    div_text.appendChild(p_button);
