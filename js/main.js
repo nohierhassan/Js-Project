@@ -136,20 +136,23 @@
 
 
 
-	var goHere = function() {
+	// close window of view product details when click close_window icon
+	var close_window = $("#close_window");
+	var product_details_view = $("#product_details_view");
 
-		$('.mouse-icon').on('click', function(event){
-			
-			event.preventDefault();
+	close_window.click(function(){
+		product_details_view.fadeOut(300);
+	});
 
-			$('html,body').animate({
-				scrollTop: $('.goto-here').offset().top
-			}, 500, 'easeInOutExpo');
+	// close window of view product details when click outside the window
+	$(document).click(function (e){
+
+		if (product_details_view.is(e.target) && product_details_view.has(e.target).length === 0){
+
+			product_details_view.fadeOut(300);
 			
-			return false;
-		});
-	};
-	goHere();
+		}
+	});
 
 
 
