@@ -118,19 +118,10 @@ let create_divs = (ele, i, users) => {
     });
 
     //click button to view product view
-    a_contains_img.addEventListener('click', (e)=>{
-        // e.preventDefault();
+    show_details_button.addEventListener('click', (e)=>{
+         
         product_details_view.style.display = 'block';
-        // console.log(users[i].ProductId);
-        // product_details.open('GET', `https://afternoon-falls-30227.herokuapp.com/api/v1/products/${users[i].ProductId}`);
-        // console.log(`https://afternoon-falls-30227.herokuapp.com/api/v1/products/${users[i].ProductId}`)
-        // product_details.send();
-        // console.log(product_details.status);
-        // if(product_details.status == 200){
-        //     one_product = JSON.parse(product_details.response).data;
-        // }else{
-        //     console.log("faild");
-        // }
+        
         fetch(`https://afternoon-falls-30227.herokuapp.com/api/v1/products/${users[i].ProductId}`)
         .then(response => {
             return response.json();
@@ -140,23 +131,28 @@ let create_divs = (ele, i, users) => {
             document.getElementById("ProductId").innerHTML=` ProductId : ${one_product.ProductId}`;
             document.getElementById("Category").innerHTML=` Category : ${one_product.Category}`;
             document.getElementById("MainCategory").innerHTML=` MainCategory : ${one_product.MainCategory}`;
-            document.getElementById("TaxTarifCode").innerHTML=` TaxTarifCode : ${one_product.TaxTarifCode}`;
-            document.getElementById("SupplierName").innerHTML=` SupplierName : ${one_product.SupplierName}`;
-            document.getElementById("WeightMeasure").innerHTML=` WeightMeasure : ${one_product.WeightMeasure}`;
-            document.getElementById("WeightUnit").innerHTML=` WeightUnit : ${one_product.WeightUnit}`;
-            document.getElementById("Description").innerHTML=` Description : ${one_product.Description}`;
             document.getElementById("Name").innerHTML=` Name : ${one_product.Name}`;
-            document.getElementById("DateOfSale").innerHTML=` DateOfSale : ${one_product.DateOfSale}`;
+ 
+            document.getElementById("SupplierName").innerHTML=` SupplierName : ${one_product.SupplierName}`;
+            document.getElementById("WeightMeasure").innerHTML=` Weight : ${one_product.WeightMeasure} ${one_product.WeightUnit}`;
+            
+            document.getElementById("Description").innerHTML=` Description : ${one_product.Description}`;
             document.getElementById("ProductPicUrl").src= `${one_product.ProductPicUrl}`;
-            document.getElementById("Status").innerHTML=` Status : ${one_product.Status}`;
-            document.getElementById("Quantity").innerHTML=` Quantity : ${one_product.Quantity}`;
-            document.getElementById("UoM").innerHTML=` UoM : ${one_product.UoM}`;
-            document.getElementById("CurrencyCode").innerHTML=` CurrencyCode : ${one_product.CurrencyCode}`;
-            document.getElementById("Price").innerHTML=` Price : ${one_product.Price}`;
-            document.getElementById("Width").innerHTML=` Width : ${one_product.Width}`;
-            document.getElementById("Depth").innerHTML=` Depth : ${one_product.Depth}`;
-            document.getElementById("Height").innerHTML=` Height : ${one_product.Height}`;
-            document.getElementById("DimUnit").innerHTML=` DimUnit : ${one_product.DimUnit}`;
+           
+            document.getElementById("price-currency").innerHTML=` Price : ${one_product.Price} ${one_product.CurrencyCode}`;
+            document.getElementById("Width").innerHTML=` Width : ${one_product.Width} ${one_product.DimUnit}`;
+            document.getElementById("Depth").innerHTML=` Depth : ${one_product.Depth} ${one_product.DimUnit}`;
+            document.getElementById("Height").innerHTML=` Height : ${one_product.Height} ${one_product.DimUnit}`;
+             
+            var quantity=document.getElementById("Quantity").value;
+            if(`${one_product.Quantity}`>=1){
+                document.getElementById("availablity").innerHTML=`Availabilty : in Stock`;
+            }else{
+                document.getElementById("availablity").innerHTML=`Availabilty : out of  Stock`; 
+            }
+             
+
+
             
              
         })
