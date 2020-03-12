@@ -84,6 +84,7 @@ xhttp.open("GET", "https://afternoon-falls-30227.herokuapp.com/api/v1/products/"
        
 
 */
+   var tot=0
     for(let x=1;x<=13;x++){
       fetch(`https://afternoon-falls-30227.herokuapp.com/api/v1/products/?page=${x}`)
       .then((response) => {
@@ -106,29 +107,48 @@ xhttp.open("GET", "https://afternoon-falls-30227.herokuapp.com/api/v1/products/"
             if(products[j]==id){
                   // get img
                     let img= data.data[i]['ProductPicUrl'];
-                    let elemImg = document.createElement("img");
-                    elemImg.setAttribute("src",img);
-                    elemImg.setAttribute("height", "200");
-                    elemImg.setAttribute("width", "200");
-                    elemImg.setAttribute("alt", "Flower");
-                    document.getElementById("abc").appendChild(elemImg);
-                    let br = document.createElement("br");
-                    document.getElementById('abc').appendChild(br);
+                    let body =document.getElementById('abc');
+                    let r = document.createElement("TR");
+                    r.setAttribute("height","100");
+                    // add cell
+                    let td = document.createElement("TD");
+                    
+
+                    //td.setAttribute("height","200");
+                    // put image into cell
+                    let createImg = document.createElement("IMG");
+                    createImg.setAttribute("src",img);
+                    createImg.setAttribute("height","150");
+                    td.appendChild(createImg);
+                    r.appendChild(td);
+                    body.appendChild(r);
+
+                   
+                    //
+                   
+                    //let br = document.createElement("br");
+                    //document.getElementById('abc').appendChild(br);
                    // get name of product
                     let name=data.data[i]['Name'];
-                    let elemName=document.createElement("span");
-                    elemName.innerHTML=name;
-                   
-                    document.getElementById("abc").appendChild(elemName);
-                    document.getElementById('abc').appendChild(br);
+                    let nameTd = document.createElement("TD");
+
+                   // let elemName=document.createElement("span");
+                    nameTd.innerHTML=name;
+                    r.appendChild(nameTd);
+                    body.appendChild(r);
+                      //document.getElementById('abc').appendChild(br);
 
                     //price
                     
                     let price=data.data[i]['Price'];
-                    let elemPrice=document.createElement("span");
-                    elemPrice.innerHTML=price;
-                    document.getElementById("abc").appendChild(elemPrice);
-                    document.getElementById('abc').appendChild(br);
+                   // let elemPrice=document.createElement("span");
+                   let priceTd = document.createElement("TD");
+
+                    priceTd.innerHTML=price;
+                    r.appendChild(priceTd);
+                    body.appendChild(r);
+                    //document.getElementById("abc").appendChild(elemPrice);
+                   // document.getElementById('abc').appendChild(br);
                     let convertPrice=Number(price);
 
 
@@ -138,24 +158,40 @@ xhttp.open("GET", "https://afternoon-falls-30227.herokuapp.com/api/v1/products/"
                  inputquantity.setAttribute("min","1");
                  inputquantity.setAttribute("max","10");
                  inputquantity.setAttribute("value","0");
+                 let inputTd = document.createElement("TD");
+                // priceTd.innerHTML=price;
+                 inputTd.appendChild(inputquantity);
+                 r.appendChild(inputTd);
+                 body.appendChild(r);
 
-                 inputquantity.setAttribute("class","input-price")
-                 document.getElementById("abc").appendChild(inputquantity);
-                 document.getElementById('abc').appendChild(br);
+                 //inputquantity.setAttribute("class","input-price")
+               //  document.getElementById("abc").appendChild(inputquantity);
+                // document.getElementById('abc').appendChild(br);
 
                  //total price
                  
-                   inputquantity.addEventListener('change',(ev)=>{
-                   
-                      let inputPrice=inputquantity.value;
-                    console.log(typeof inputPrice)
-                        tot=inputPrice*convertPrice;
+                
+                
+                  let totalTd=document.createElement("TD");
+                  inputquantity.addEventListener('click',function(event){
+                      
+                    let inputPrice=inputquantity.value;
+                    let tot=inputPrice*convertPrice;
+                    totalTd.innerHTML=tot; 
                        
+                      
+                    
+                   });
+                   r.appendChild(totalTd);
+                   body.appendChild(r);
 
-                        
-                 });
+                   
 
                  
+              
+                  
+                  
+                  
                 
 
             }
