@@ -10,6 +10,7 @@ let one_product={};
  // variable that contains card productID saved in localstoradge
 var product_card = "";
 
+
 //function creat elements and append it to the div
 let create_divs = (ele, i, users) => {
     //create element div and add its classes
@@ -114,7 +115,7 @@ let create_divs = (ele, i, users) => {
         console.log(users[i]);
         product_card += users[i].ProductId + " ";
         localStorage.setItem("product", product_card);
-        // console.log(localStorage.getItem("product"));
+         
     });
 
     //click button to view product view
@@ -128,6 +129,7 @@ let create_divs = (ele, i, users) => {
         })
         .then(data =>   {
             one_product=data['data'];
+            
             document.getElementById("ProductId").innerHTML=` ProductId : ${one_product.ProductId}`;
             document.getElementById("Category").innerHTML=` Category : ${one_product.Category}`;
             document.getElementById("MainCategory").innerHTML=` MainCategory : ${one_product.MainCategory}`;
@@ -150,8 +152,11 @@ let create_divs = (ele, i, users) => {
             }else{
                 document.getElementById("availablity").innerHTML=`Availabilty : out of  Stock`; 
             }
-             
 
+         
+            
+
+            
 
             
              
@@ -160,12 +165,19 @@ let create_divs = (ele, i, users) => {
             console.log("faild");
         })
         
-        
-       
+        document.getElementById("addCartBtn").addEventListener('click', (e)=>{
+            console.log(one_product);
+            product_card += one_product.ProductId + " ";
+            localStorage.setItem("product", product_card);
+              
+        });
         
  
 
     });
+   
+
+ 
   
 }
 
