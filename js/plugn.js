@@ -146,7 +146,7 @@ let create_divs = (ele, i, users) => {
             document.getElementById("Depth").innerHTML=` Depth : ${one_product.Depth} ${one_product.DimUnit}`;
             document.getElementById("Height").innerHTML=` Height : ${one_product.Height} ${one_product.DimUnit}`;
              
-            var quantity=document.getElementById("Quantity").value;
+             
             if(`${one_product.Quantity}`>=1){
                 document.getElementById("availablity").innerHTML=`Availabilty : in Stock`;
             }else{
