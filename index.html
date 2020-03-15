@@ -17,6 +17,7 @@
 	<!-- our own style and custom file -->
 	<link rel="stylesheet" href="css/ourstyle.css">
 
+ 
   </head>
   <body class="goto-here">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -30,11 +31,9 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-			  <li class="nav-item"><a href="product-single.html" class="nav-link">Single Product</a></li>
-	          <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+ 	          <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-	        </ul>
+ 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -82,47 +81,43 @@
 		<span id="close_window"><i class="fas fa-times"></i></span>
 		<div class="product_container">
 			<div class="row">
-				<div class="col-md-5">
-					<img  class="img-fluid" alt="Could be portrait or landscape" id="ProductPicUrl">
-				</div>
-				<div class="col-md-7 product-details">
+				<div class="col-3 " >
+						<img  class="image-style"    id="ProductPicUrl">
+ 				</div>
+				<div class="col-6 oneProduct-middleDiv">
 					<h6  id="ProductId"></h6>
-					<h6  id="Category"></h6>
 					<h6  id="MainCategory"></h6>
-					<h6  id="TaxTarifCode"></h6>
-					<h6  id="SupplierName"></h6>
-					<h6  id="WeightMeasure"></h6>
+					<h6  id="Category"></h6>
+					<h6  id="Name"></h6>
+ 					<h6  id="SupplierName"></h6>
 					<h6  id="WeightUnit"></h6>
 					<h6  id="Description"></h6>
-					<h6  id="Name"></h6>
-					<h6  id="DateOfSale"></h6>
-					<h6  id="Status"></h6>
-					<h6  id="Quantity"></h6>
-					<h6  id="UoM"></h6>
-					<h6  id="CurrencyCode"></h6>
-					<h6  id="Price"></h6>
+					
+  					<h6  id="Price"></h6>
+					<h6  id="WeightMeasure"></h6>
 					<h6  id="Width"></h6>
 					<h6  id="Depth"></h6>
 					<h6  id="Height"></h6>
-					<h6  id="DimUnit"></h6>
-				</div>
+ 				</div>
+				<div class="col-3"  >
+					<div class="div-style">
+					 <p id="availablity">Available:</p>
+					 <hr>
+					 <h6 id="price-currency">Hello</h6>
+					 <label for="Quantity">Quantity</label>
+					 <input type="number" id="Quantity" name="Quantity" class="stroke-width"><br> 
+					 <hr>
+					  
+					 <button class="buy-now text-center py-2 oneProduct-addcart" id="addCartBtn">Add to cart <i class="fas fa-cart-plus" ></i></button>
+					</div>
+					 
+
+			 	</div>
 			</div>
 		</div>
 	</section>
 
-    <footer class="ftco-footer bg-light ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    
     
   
 
