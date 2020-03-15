@@ -388,7 +388,26 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto; }
+.image-style{
+  max-height: 100%;  
 
+  max-width: 90%; 
+
+  position: absolute;  
+
+  top: 0;  
+
+  bottom: 0;  
+
+  left: 0;  
+
+  right: 0;  
+
+  margin: auto;
+
+  padding-left: 15px;
+
+}
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -411,7 +430,61 @@ mark,
     width: auto;
     height: 100%;
     /* margin-left: -50px; */
-  }
+}
+.div-style{
+  max-height: 90%;  
+
+  max-width: 75%; 
+
+  position: absolute;  
+
+  top: 0;  
+
+  bottom: 0;  
+
+  left: 0;  
+
+  right: 0;  
+
+  margin: auto;
+  padding-top: 25px;
+
+  padding-left: 10px;
+  padding-right:10px ;
+ 
+  background-color:#fff;
+
+  border-radius: 5px;
+
+
+
+
+}
+#price-currency{
+  font-size: 15px;
+  font-weight: bold ;
+
+
+}
+input{
+
+  width: 90%;
+}
+.oneProduct-totalPrice{
+  padding-bottom: 15px;
+}
+.oneProduct-addcart{
+ width: 100%;
+ border-radius: 20px;
+ background-color: #ffa45c;
+
+}
+.oneProduct-middleDiv{
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+ 
 
 .figure {
   display: inline-block; }
@@ -1707,10 +1780,7 @@ select.form-control:focus::-ms-value {
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
-
-select.form-control[size], select.form-control[multiple] {
-  height: auto; }
-
+  0
 textarea.form-control {
   height: auto; }
 

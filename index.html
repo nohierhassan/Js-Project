@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Shop Ecommerce</title>
+    <title>iDevice Store</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -17,11 +17,12 @@
 	<!-- our own style and custom file -->
 	<link rel="stylesheet" href="css/ourstyle.css">
 
+ 
   </head>
   <body class="goto-here">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">ELFATAK TEAM</a>
+	      <a class="navbar-brand" href="index.html">iDevice Store</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -30,10 +31,9 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+ 	          <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-	        </ul>
+ 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -46,23 +46,7 @@
 				<h2 class="mb-5 text-center">All Products</h2>
 			</div>
     		<div class="row" id="all_products_view">
-    			<!-- <div class="col-sm col-md-6 col-lg">
-    				<div class="product">
-    					<a href="#" class="img-prod">
-							<img class="img-fluid" src="images/product-5.jpg" alt="Colorlib Template">
-    						<div class="overlay"></div>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Floral Jackquard Pullover</a></h3>
-		    				<p class="price">$80.00</p>
-    						<p class="bottom-area d-flex px-3">
-    							<button class="buy-now text-center py-2">
-									Add to cart <i class="fas fa-cart-plus"></i>
-								</button>
-    						</p>
-    					</div>
-    				</div>
-    			</div> -->
+    		 
     			
 			</div>
 			<div class="col text-center">
@@ -97,17 +81,42 @@
 		<span id="close_window"><i class="fas fa-times"></i></span>
 		<div class="product_container">
 			<div class="row">
-				<div class="col-md-5">
-					<img class="img-fluid" src="images/product-1.jpg" alt="product_img">
-				</div>
-				<div class="col-md-7 product-details">
-					<h3 class="mt-4">Young Woman Wearing Dress</h3>
-    				<h4 class="price">$120.00</h4>
-				</div>
+				<div class="col-3 " >
+						<img  class="image-style"    id="ProductPicUrl">
+ 				</div>
+				<div class="col-6 oneProduct-middleDiv">
+					<h6  id="ProductId"></h6>
+					<h6  id="MainCategory"></h6>
+					<h6  id="Category"></h6>
+					<h6  id="Name"></h6>
+ 					<h6  id="SupplierName"></h6>
+					<h6  id="WeightUnit"></h6>
+					<h6  id="Description"></h6>
+					
+  					<h6  id="Price"></h6>
+					<h6  id="WeightMeasure"></h6>
+					<h6  id="Width"></h6>
+					<h6  id="Depth"></h6>
+					<h6  id="Height"></h6>
+ 				</div>
+				<div class="col-3"  >
+					<div class="div-style">
+					 <p id="availablity">Available:</p>
+					 <hr>
+					 <h6 id="price-currency">Hello</h6>
+					 
+					 <hr>
+					  <br><br>
+					 <button class="buy-now text-center py-2 oneProduct-addcart" id="addCartBtn">Add to cart <i class="fas fa-cart-plus" ></i></button>
+					</div>
+					 
+
+			 	</div>
 			</div>
 		</div>
 	</section>
 
+<<<<<<< HEAD
     <footer class="ftco-footer bg-light ftco-section">
       <div class="container">
         <div class="row">
@@ -118,13 +127,29 @@
         </div>
       </div>
     </footer>
+||||||| merged common ancestors
+    <footer class="ftco-footer bg-light ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+=======
+    
+>>>>>>> fc35db04f03277a69447a053d9524c5aaec90c25
     
   
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
+  
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
