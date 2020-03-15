@@ -108,7 +108,10 @@ let create_divs = (ele, i, users) => {
    div_col.appendChild(single_product);
 
     //append div_col to products_view
-    products_view.appendChild(div_col);
+    if(products_view != null){
+        products_view.appendChild(div_col);
+    }
+    
 
     // click button to add productid to local storage
     add_cart_button.addEventListener('click', (e)=>{
@@ -116,6 +119,10 @@ let create_divs = (ele, i, users) => {
         product_card += users[i].ProductId + " ";
         localStorage.setItem("product", product_card);
          
+    });
+
+    a_contains_img.addEventListener('click', (e)=>{
+        e.preventDefault();
     });
 
     //click button to view product view
@@ -153,12 +160,6 @@ let create_divs = (ele, i, users) => {
                 document.getElementById("availablity").innerHTML=`Availabilty : out of  Stock`; 
             }
 
-         
-            
-
-            
-
-            
              
         })
         .catch(err => {
