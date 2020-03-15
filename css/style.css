@@ -8899,7 +8899,9 @@ h1, h2, h3, h4, h5,
         font-size: 13px;
         color: #000000;
         text-transform: uppercase;
-        font-weight: 300; }
+        font-weight: 300;
+        outline: none;
+       }
         .product .text .bottom-area a.add-to-cart i, .product .text .bottom-area a.buy-now i {
           font-size: 16px; }
       .product .text .bottom-area a.add-to-cart {
